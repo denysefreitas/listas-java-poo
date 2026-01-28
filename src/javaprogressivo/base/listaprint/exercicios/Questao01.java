@@ -1,4 +1,4 @@
-package javaprogressivo.base.listaprint;
+package javaprogressivo.base.listaprint.exercicios;
 // Faça um programa em Java que exibe seu nome na primeira linha, seu endereço na segunda linha e seu CPF na terceira linha, usando três vezes o método println()
 
 public class Questao01 {

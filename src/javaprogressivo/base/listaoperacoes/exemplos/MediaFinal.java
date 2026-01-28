@@ -1,4 +1,4 @@
-package javaprogressivo.base.listaoperacoes;
+package javaprogressivo.base.listaoperacoes.exemplos;
 // 1. Crie um programa que recebe suas três notas (colégio, faculdade) e calcule a média final.
 
 import java.util.Scanner;

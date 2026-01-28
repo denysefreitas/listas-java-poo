@@ -1,4 +1,4 @@
-package javaprogressivo.base.listaprint;
+package javaprogressivo.base.listaprint.exercicios;
 /* Faça um programa que mostre o seguinte board:
 ___ | ___ | ___
 ___ | ___ | ___

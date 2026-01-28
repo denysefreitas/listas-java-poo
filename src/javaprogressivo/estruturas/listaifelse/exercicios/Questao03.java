@@ -1,4 +1,4 @@
-package javaprogressivo.estruturas.listaifelse;
+package javaprogressivo.estruturas.listaifelse.exercicios;
 /*
 Crie um programa, em Java, que receba os coeficientes de uma equação do 2o grau e retorne suas raízes.
 

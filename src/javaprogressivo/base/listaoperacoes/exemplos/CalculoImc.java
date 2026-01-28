@@ -1,4 +1,4 @@
-package javaprogressivo.base.listaoperacoes;
+package javaprogressivo.base.listaoperacoes.exemplos;
 //2. Crie um programa que receba a altura e o peso do usuário, e diga seu IMC (Índice de Massa Corporal), dado pela fórmula:
 // imc = peso / altura^2
 

@@ -1,4 +1,4 @@
-package javaprogressivo.base.listaprint;
+package javaprogressivo.base.listaprint.exercicios;
 
 /* Escreva um software que exiba a seguinte mensagem na tela:
    J    a   v     v  a

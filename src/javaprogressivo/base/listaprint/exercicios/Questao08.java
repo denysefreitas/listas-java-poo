@@ -1,4 +1,4 @@
-package javaprogressivo.base.listaprint;
+package javaprogressivo.base.listaprint.exercicios;
 // Escreva um programa que exiba a letra da sua música favorita, de maneira bem formatada e organizada.
 
 public class Questao08 {

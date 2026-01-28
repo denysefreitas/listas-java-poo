@@ -1,4 +1,4 @@
-package javaprogressivo.base.listaprint;
+package javaprogressivo.base.listaprint.exercicios;
 /*
 Faça um programa que exiba na tela a tabuada do 9:
 9 x 1 = 9

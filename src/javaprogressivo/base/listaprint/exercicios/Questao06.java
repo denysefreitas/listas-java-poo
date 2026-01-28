@@ -1,4 +1,4 @@
-package javaprogressivo.base.listaprint;
+package javaprogressivo.base.listaprint.exercicios;
 // Faça um programa, em Java, que exibia a seguinte operação Matemática:
 //21 x 12 = resultado da multiplicação
 
