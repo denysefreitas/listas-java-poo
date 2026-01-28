@@ -1,4 +1,4 @@
-package javaprogressivo.base.listaprint;
+package javaprogressivo.base.listaprint.exercicios;
 // Se ao invés de você colocar uma string (ou seja, um texto entre as aspas) dentro dos método de print colocar uma operação matemática, como 21+12, o que acontece? O que é exibido?
 
 public class Questao05 {

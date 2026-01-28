@@ -1,4 +1,4 @@
-package javaprogressivo.estruturas.listaifelse;
+package javaprogressivo.estruturas.listaifelse.exercicios;
 
 import java.util.Scanner;
 

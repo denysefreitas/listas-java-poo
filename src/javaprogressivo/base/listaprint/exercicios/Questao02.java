@@ -1,4 +1,4 @@
-package javaprogressivo.base.listaprint;
+package javaprogressivo.base.listaprint.exercicios;
 // Refaça o exercício anterior, agora usando tapenas uma vez método print() (dica: \n )
 
 public class Questao02 {

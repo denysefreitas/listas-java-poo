@@ -1,4 +1,4 @@
-package javaprogressivo.base.listaprint;
+package javaprogressivo.base.listaprint.exercicios;
 /* Escreva um programa que mostra a seguinte carinha:
  +"""""+
 [| o o |]

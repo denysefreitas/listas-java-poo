@@ -1,4 +1,4 @@
-package javaprogressivo.base.listascanner;
+package javaprogressivo.base.listascanner.exemplos;
 // Crie um aplicativo que pergunte o ano de nascimento e diga a idade atual do indivíduo.
 //  Use a classe Calendar e o método get(Calendar.YEAR) desta classe.
 
