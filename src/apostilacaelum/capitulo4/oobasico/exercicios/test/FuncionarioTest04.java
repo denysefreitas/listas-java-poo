@@ -6,10 +6,12 @@ import apostilacaelum.capitulo4.oobasico.exercicios.domain.Funcionario;
 
 public class FuncionarioTest04 {
     public static void main(String[] args) {
-        Funcionario funcionario = new Funcionario("Denyse", 2500, "1107");
+        Funcionario funcionario01 = new Funcionario("Denyse", 2500, "1107");
+        Funcionario funcionario02 = new Funcionario("Denyse", 2500, "1107");
         Data dataEntrada = new Data(31, 12, 890);
-        funcionario.setDataEntrada(dataEntrada);
+        funcionario01.setDataEntrada(dataEntrada);
 
-        funcionario.imprime();
+        funcionario01.imprime();
+        funcionario02.imprime();
     }
 }

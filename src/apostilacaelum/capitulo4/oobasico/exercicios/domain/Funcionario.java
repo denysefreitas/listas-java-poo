@@ -7,11 +7,15 @@ public class Funcionario {
     private double salario;
     private Data dataEntrada;
     private String rg;
+    private static int proximoId = 1;
+    private final int id;
 
     public Funcionario() {
+        id = proximoId++;
     }
 
     public Funcionario(String nome, String rg) {
+        this();
         this.nome = nome;
         this.rg = rg;
     }
@@ -34,18 +38,19 @@ public class Funcionario {
     public void imprime(){
         System.out.println("DADOS DO FUNCIONÁRIO");
         System.out.println("Nome: " + getNome());
+        System.out.printf("ID: %03d%n", getId());
         System.out.println("RG: " + getRg());
         System.out.println("Data de entrada: " + this.dataEntrada);
         System.out.println("Departamento: " + getDepartamento());
         System.out.println("Salário: " + getSalario());
-        System.out.println("Valor do salário anual: R$ " + calculaGanhoAnual());
+        System.out.println("Valor do salário anual: R$ " + getGanhoAnual());
     }
 
-    public void calcularBonificacao(double aumento){
+    public void getBonificacao(double aumento){
         this.salario += aumento;
     }
 
-    public double calculaGanhoAnual(){
+    public double getGanhoAnual(){
         return this.salario * 12;
     }
 
@@ -83,5 +88,9 @@ public class Funcionario {
 
     public void setRg(String rg) {
         this.rg = rg;
+    }
+
+    public int getId() {
+        return id;
     }
 }
