@@ -1,20 +1,26 @@
 package javaprogressivo.pooparteii.jogo.campominado.domain;
 
+import java.util.Arrays;
 import java.util.Random;
 
 public class Tabuleiro {
     private int tamanho = 8;
     private char[][] tabuleiro;
-    private int quantidadeMinas = 10;
-    Random sorteia = new Random();
 
-    public Tabuleiro() {
+    public Tabuleiro(int opcao){
         tabuleiro = new char[tamanho][tamanho];
-        sorteiaMinas();
+
+        // Cria o tabuleiro do gabarito
+        if(opcao == 1){
+            sorteiaMinas(10);
+            preencheTabuleiro();
+        } else {
+            preencheTabuleiroUsuario();
+        }
     }
 
+    // Exibe o tabuleiro
     public void exibe(){
-        // Exibe o tabuleiro
         System.out.println("  Linhas");
 
         for (int i = 0; i < tabuleiro.length; i++) {
@@ -36,7 +42,8 @@ public class Tabuleiro {
     }
 
     // Sorteia as minas no tabuleiro
-    public void sorteiaMinas(){
+    public void sorteiaMinas(int quantidadeMinas){
+        Random sorteia = new Random();
         boolean isRepetido;
         int linha, coluna;
 
@@ -54,7 +61,54 @@ public class Tabuleiro {
         }
     }
 
-    public void preencheTabuleiro(){
-        // atualiza o tabuleiro com os números de bombas ao redor
+    // Atualiza o tabuleiro com os números de bombas ao redor
+    public void preencheTabuleiroUsuario() {
+        for (char[] chars : tabuleiro) {
+            Arrays.fill(chars, '_');
+        }
+    }
+
+    // Atualiza o tabuleiro com os números de bombas ao redor
+    public void preencheTabuleiro() {
+        for (int i = 0; i < tabuleiro.length; i++) {
+            for (int j = 0; j < tabuleiro[i].length; j++) {
+                if(!isBomba(i, j)){
+                    tabuleiro[i][j] = (char) ('0' + contarBombas(i, j));
+                }
+            }
+        }
+    }
+
+    // Confere se a coordenada está no tabuleiro
+    public boolean isCoordenadaValida(int coordenada){
+        return coordenada >= 0 && coordenada < tabuleiro.length;
+    }
+
+    // Confere se a coordenada é uma bomba
+    public boolean isBomba(int i, int j){
+        return tabuleiro[i][j] == '*';
+    }
+
+    // Conta as bombas ao redor
+    public int contarBombas(int i, int j){
+        int[] linha  = {-1, -1, -1,  0,  0,  1,  1,  1};
+        int[] coluna = {-1,  0,  1, -1,  1, -1,  0,  1};
+        int x, y, qntBombas = 0;
+
+        for (int k = 0; k < 8; k++) {
+            x = i + linha[k];
+            y = j + coluna[k];
+
+            if (isCoordenadaValida(x) && isCoordenadaValida(y)){
+                if (tabuleiro[x][y] == '*'){
+                    qntBombas++;
+                }
+            }
+        }
+        return qntBombas;
+    }
+
+    public int getTamanho() {
+        return tamanho;
     }
 }
