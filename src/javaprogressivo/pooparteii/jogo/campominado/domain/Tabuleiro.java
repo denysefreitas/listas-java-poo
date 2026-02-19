@@ -6,6 +6,7 @@ import java.util.Random;
 public class Tabuleiro {
     private int tamanho = 8;
     private char[][] tabuleiro;
+    private final int jogadasParaVencer = tamanho * tamanho - 10;
 
     public Tabuleiro(int opcao){
         tabuleiro = new char[tamanho][tamanho];
@@ -21,7 +22,7 @@ public class Tabuleiro {
 
     // Exibe o tabuleiro
     public void exibe(){
-        System.out.println("  Linhas");
+        System.out.println("\n  Linhas");
 
         for (int i = 0; i < tabuleiro.length; i++) {
             System.out.print("\t" + (tabuleiro.length - i) + "\t\t");
@@ -108,7 +109,19 @@ public class Tabuleiro {
         return qntBombas;
     }
 
+    public void atualizarTabuleiro(int x, int y, Tabuleiro gabarito){
+        this.tabuleiro[x][y] = gabarito.tabuleiro[x][y];
+    }
+
+    public boolean isVitoria(int jogadas){
+        return jogadas == this.jogadasParaVencer;
+    }
+
     public int getTamanho() {
         return tamanho;
+    }
+
+    public char[][] getTabuleiro() {
+        return tabuleiro;
     }
 }
